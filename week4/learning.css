@@ -1,0 +1,208 @@
+#container {
+    width: 90vw;
+    height: 90vh;
+    background-color: rgb(202, 240, 255);
+    border-radius: 2pc;
+    display: flex;
+    flex-direction: column; /*꼬치 세로로*/
+    justify-content: space-evenly; /*header, main, footer 간격 */
+    align-items: center;
+    font-weight: bold;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box; /*나중에 여백 조절하기 쉬움*/
+}
+
+header {
+    width: 92.5%; /*부모인 container의 95%*/
+    height: 20%; /*height 대신 10% 쓸꺼란 이야기*/
+    /*지금은 세로로 적용되어 있음, 부모 설정 때문에*/
+    background-color: white;
+    border-radius: 2pc;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row; /*다시 가로로(logo, nav 정렬)*/
+    justify-content: space-between; /*지금은 가로니까 justify content를, 양끝으로*/
+    align-items: center;
+}
+
+#fix {
+    display: flex;
+    flex-basis: 45%;
+    height: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+}
+
+img {
+    height: 90%;
+    object-fit: cover;
+}
+
+#logo {
+    display: flex;
+    flex-basis: 45%; /*로고 폭 지정*/
+    height: 90%;
+    justify-content: space-evenly; /*글자 가운데로(가로)*/
+    align-items: center; /*글자 가운데로(세로)*/
+    font-size: 2rem;
+    margin-right: 2%;
+}
+
+.nav-item {
+    display: flex;
+    flex-basis: 19%;
+    background-color: white;
+    border-radius: 2pc;
+    height: 90%;
+    display: flex;
+    justify-content: center; /*글자 가운데로(가로)*/
+    align-items: center; /*글자 가운데로(세로)*/
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    flex-basis: 70%; /*세로방향*/
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+article {
+    flex-basis: 78%;
+    height: 90%;
+    background-color: white;
+    border-radius: 2pc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+aside {
+    flex-basis: 18%;
+    height: 90%;
+    background-color: white;
+    border-radius: 2pc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*글자 가운데로(가로)*/
+    align-items: center; /*글자 가운데로(세로)*/
+    font-size: 2rem;
+}
+
+ol {
+    font-size: 1rem;
+    margin-right: 20%;
+    line-height: 4vh;
+    margin-bottom: 20%;
+}
+
+.article-item {
+    flex-basis: 15%;
+    width: 95%;
+    display: flex;
+    justify-content: center; /*글자 가운데로(가로)*/
+    align-items: center; /*글자 가운데로(세로)*/
+    font-size: 2rem;
+}
+
+section {
+    flex-basis: 30%;
+    width: 95%;
+    display: flex;
+    justify-content: left; /*글자 가운데로(가로)*/
+    align-items: center; /*글자 가운데로(세로)*/
+    font-size: 1rem;
+}
+
+.contents {
+    font-size: 1rem;
+    white-space:nowrap;
+    line-height: 4vh;
+    margin-right: 20%;
+}
+
+#title1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 17%;
+    text-decoration : underline;
+    text-underline-position : under;
+}
+
+#title2 {
+    margin-left: 10%;
+    text-decoration : underline;
+    text-underline-position : under;
+}
+
+footer {
+    flex-basis: 15%; /*부모가 세로라 높이*/
+    width: 92.5%;
+    background-color: rgb(255, 255, 239);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration-line: none;
+    color: black
+}
+
+p {
+    font-size: 2rem;
+}
+
+#box {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 55%;
+}
+
+.image {
+    height: 18vh;
+    margin-right: 10%;
+    margin-left: 30%;
+}
+
+.detail {
+    font-size: 1rem;
+    white-space:nowrap;
+    line-height: 4vh;
+}
+
+@media all and (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    article {
+        width: 95%;
+    }
+    aside {
+        width: 95%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+}
